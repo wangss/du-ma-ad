@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/skin.css" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script language="JavaScript">
+        function gotoPage(page){
+            alert(page);
+        }
+    </script>
+
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="main-header">
+            <a class="logo" href="#"><b>淘人科技</b></a>
+
+            <nav class="navbar navbar-static-top">
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li><img src=""> </li>
+                        <li>UserName</li>
+                        <li><a>退出</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="main-sidebar">
+            <div class="sidebar" style="height:auto;">
+
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img class="img-circle" src="">
+                    </div>
+                    <div class="pull-left info">
+                        Admin
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu">
+
+                    <li>
+                        <a href="#"><span>用户管理</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><span>标签管理</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><span>索引管理</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><span>客服管理</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="main-content">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户管理</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="uid" placeholder="uid">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="trId" placeholder="trId">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="areaCode" placeholder="86">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="phone" placeholder="phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="nickname" placeholder="nickname">
+                        </div>
+                        <button type="submit" class="btn btn-default">查找</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <!-- Table -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>UID</th>
+                            <th>昵称</th>
+
+                            <th>TRID</th>
+                            <th>AREACODE</th>
+                            <th>PHONE</th>
+                            <th>状态</th>
+                            <th>环信用户</th>
+                            <th>创建时间</th>
+                            <th>详情</th>
+                            <th>禁用</th>
+                        </tr>
+
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <td>UID</td>
+                            <td>NICKNAME</td>
+
+                            <td>TRID</td>
+                            <td>AREACODE</td>
+                            <td>PHONE</td>
+                            <td>STATUS</td>
+                            <td>EASE_MOB_STATUS</td>
+                            <td>CRATE_TIME</td>
+                            <td></td>
+                            <td>禁用</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <a onclick="gotoPage(4);">点我</a>
+        </div>
+
+
+
+
+    </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

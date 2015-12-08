@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+    <dubbo:application name="dubbo-trAdmin"/>
+    <!-- 使用multicast广播注册中心暴露发现服务地址 -->
+    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181"/>-->
+    <!--<dubbo:registry address="zookeeper://120.25.224.206:2181"/>-->
+    <dubbo:registry address="zookeeper://10.45.162.235:2181"/>
+
+
+    <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+    <dubbo:reference id="signUpService" interface="com.taoren.service.user.SignUpRemoteService"/>
+    <dubbo:reference id="loginService" interface="com.taoren.service.user.LoginRemoteService"/>
+    <dubbo:reference id="userService" interface="com.taoren.service.user.UserRemoteService"/>
+    <dubbo:reference id="userInfoService" interface="com.taoren.service.user.UserInfoRemoteService"/>
+
+    <dubbo:reference id="messageService" interface="com.taoren.service.user.MessageRemoteService"/>
+
+
+    <dubbo:reference id="relationService" interface="com.taoren.service.user.RelationRemoteService"/>
+    <dubbo:reference id="friendService" interface="com.taoren.service.user.UserFriendRemoteService"/>
+    <dubbo:reference id="reportService" interface="com.taoren.service.user.UserReportRemoteService"/>
+
+
+    <dubbo:reference id="labelService" interface="com.taoren.service.lb.LabelRemoteService"/>
+    <dubbo:reference id="labelCommentService" interface="com.taoren.service.lb.LabelCommentRemoteService"/>
+
+    <dubbo:reference id="askingService" interface="com.taoren.service.ask.AskingRemoteService"/>
+    <dubbo:reference id="askingReplyService" interface="com.taoren.service.ask.AskingReplyRemoteService"/>
+
+    <dubbo:reference id="uploadTokenService" interface="com.taoren.service.user.UploadTokenRemoteService"/>
+
+
+
+    <!-- 搜索 -->
+    <dubbo:reference id="userSearchService" interface="com.taoren.service.sc.UserSearchRemoteService"/>
+    <dubbo:reference id="labelSearchService" interface="com.taoren.service.sc.LabelSearchRemoteService"/>
+    <dubbo:reference id="nearBySearchService" interface="com.taoren.service.sc.NearBySearchRemoteService"/>
+    <dubbo:reference id="askingSearchService" interface="com.taoren.service.sc.AskingSearchRemoteService"/>
+    <dubbo:reference id="nearByAskingSearchService" interface="com.taoren.service.sc.NearByAskingSearchRemoteService"/>
+
+    <!--<dubbo:annotation package="com.taoren.*.controller"/>-->
+
+</beans>
